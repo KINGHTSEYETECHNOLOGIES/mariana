@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariana Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1b2a;--cream:#f5f0e8;--gold:#c9a84c;--gl:#e8cb7a;--muted:rgba(245,240,232,0.45);--bdr:rgba(201,168,76,0.2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
+body::after{content:'';position:fixed;top:-20%;left:50%;transform:translateX(-50%);width:80vw;height:60vh;background:radial-gradient(ellipse,rgba(201,168,76,.06),transparent 70%);pointer-events:none;z-index:0}
+nav{position:fixed;top:0;width:100%;padding:26px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bdr);background:rgba(13,27,42,.88);backdrop-filter:blur(12px);z-index:100}
+.logo{font-weight:300;font-size:1rem;letter-spacing:.35em;text-transform:uppercase}
+nav a{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--gold)}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 60px;z-index:1}
+.hero h1{font-weight:300;font-size:clamp(3rem,7vw,6rem);line-height:1.05;max-width:780px;animation:up .9s ease .3s both}
+.hero h1 em{font-style:italic;color:var(--gl)}
+.hero p{margin-top:32px;font-size:1.1rem;font-weight:300;line-height:1.75;max-width:480px;color:var(--muted);animation:up .9s ease .5s both}
+hr{border:none;border-top:1px solid var(--bdr)}
+section{position:relative;z-index:1;padding:90px 60px}
+.label{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:44px;display:flex;align-items:center;gap:14px}
+.label::after{content:'';width:36px;height:1px;background:var(--gold);opacity:.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.two h2{font-weight:300;font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.2}
+.two h2 em{font-style:italic;color:var(--gl)}
+.two p{font-size:1rem;line-height:1.85;color:var(--muted);font-weight:300;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);margin-top:12px}
+.cell{background:var(--bg);padding:36px 32px;transition:background .3s}
+.cell:hover{background:rgba(201,168,76,.04)}
+.num{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.2em;color:var(--gold);margin-bottom:18px;display:block}
+.cell h3{font-size:1.25rem;font-weight:400;margin-bottom:12px}
+.cell p{font-size:.9rem;line-height:1.75;color:var(--muted);font-weight:300}
+.contact{position:relative;z-index:1;padding:72px 60px 90px;border-top:1px solid var(--bdr);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end}
+.contact h2{font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15}
+.contact h2 em{font-style:italic;color:var(--gl)}
+.rows{display:flex;flex-direction:column;gap:24px}
+.row{display:flex;flex-direction:column;gap:5px;border-bottom:1px solid var(--bdr);padding-bottom:18px}
+.row label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.row a,.row span{font-size:.97rem;font-weight:300;color:var(--cream);text-decoration:none;transition:color .2s}
+.row a:hover{color:var(--gold)}
+footer{position:relative;z-index:1;padding:24px 60px;border-top:1px solid var(--bdr);display:flex;justify-content:space-between}
+footer span{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.13em;color:var(--muted)}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+  nav,section,.contact,footer{padding-left:28px;padding-right:28px}
+  .hero{padding:0 28px}
+  .two,.contact,.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Mariana Marketing</div>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h1>A performance media company built on <em>owned audiences</em> and measurable outcomes.</h1>
+  <p>Mariana Marketing develops and operates consumer-facing digital properties across high-intent verticals, driving qualified traffic directly to advertiser partners.</p>
+</div>
+
+<hr>
+
+<section>
+  <div class="label">About</div>
+  <div class="two">
+    <h2>An <em>independent publisher</em> in performance media.</h2>
+    <div>
+      <p>We are a publisher. We build and operate consumer-facing web properties, develop audiences through paid and owned channels, and send qualified, high-intent traffic directly to our advertiser partners.</p>
+      <p>We work with advertisers and affiliate networks as a direct traffic source — transparent, disclosed, and focused on delivering leads that convert.</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="label">Capabilities</div>
+  <div class="grid">
+    <div class="cell">
+      <span class="num">01</span>
+      <h3>Digital Property Development</h3>
+      <p>We design and launch consumer-facing web properties from the ground up — architecture, editorial content, compliance, and conversion flow.</p>
+    </div>
+    <div class="cell">
+      <span class="num">02</span>
+      <h3>Paid Search Acquisition</h3>
+      <p>Precision paid media across major search platforms, managed to CPL targets and optimized for lead quality over raw volume.</p>
+    </div>
+    <div class="cell">
+      <span class="num">03</span>
+      <h3>Affiliate Publishing</h3>
+      <p>We participate in affiliate and performance marketing programs as a publisher — sourcing, qualifying, and delivering traffic directly to advertiser partners.</p>
+    </div>
+    <div class="cell">
+      <span class="num">04</span>
+      <h3>Consumer Matching</h3>
+      <p>Qualification-based flows that segment audiences and route consumers to the most relevant advertiser — improving conversion quality across the funnel.</p>
+    </div>
+    <div class="cell">
+      <span class="num">05</span>
+      <h3>Email &amp; Owned Audience</h3>
+      <p>Proprietary audience assets developed and deployed as a direct traffic channel alongside paid acquisition.</p>
+    </div>
+    <div class="cell">
+      <span class="num">06</span>
+      <h3>Compliance &amp; Traffic Quality</h3>
+      <p>All properties built to platform policy and FTC standards. Traffic sourced, tracked, and reported cleanly.</p>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div>
+    <div class="label">Contact</div>
+    <h2>Work with <em>Mariana Marketing.</em></h2>
+  </div>
+  <div class="rows">
+    <div class="row"><label>Company</label><span>Mariana Marketing, LLC</span></div>
+    <div class="row"><label>Location</label><span>Boca Raton, Florida</span></div>
+    <div class="row"><label>Website</label><a href="https://marianamgroup.com">marianamgroup.com</a></div>
+    <div class="row"><label>Email</label><a href="mailto:info@marianamgroup.com">info@marianamgroup.com</a></div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Mariana Marketing, LLC</span>
+  <span>Performance Media · Boca Raton, FL</span>
+</footer>
+
+</body>
+</html>
