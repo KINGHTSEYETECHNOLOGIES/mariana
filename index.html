@@ -6,19 +6,63 @@
 <title>Mariana Marketing</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d1b2a;--cream:#f5f0e8;--gold:#c9a84c;--gl:#e8cb7a;--muted:rgba(245,240,232,0.45);--bdr:rgba(201,168,76,0.2)}
+:root{
+  --bg:#0d1b2a;
+  --cream:#f5f0e8;
+  --gold:#c9a84c;
+  --gl:#e8cb7a;
+  --muted:rgba(245,240,232,0.45);
+  --bdr:rgba(201,168,76,0.2);
+  --nav-h:78px;
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
 body::after{content:'';position:fixed;top:-20%;left:50%;transform:translateX(-50%);width:80vw;height:60vh;background:radial-gradient(ellipse,rgba(201,168,76,.06),transparent 70%);pointer-events:none;z-index:0}
-nav{position:fixed;top:0;width:100%;padding:26px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bdr);background:rgba(13,27,42,.88);backdrop-filter:blur(12px);z-index:100}
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  padding:24px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--bdr);
+  background:rgba(13,27,42,.88);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
 .logo{font-weight:300;font-size:1rem;letter-spacing:.35em;text-transform:uppercase}
 nav a{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 nav a:hover{color:var(--gold)}
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 60px;z-index:1}
-.hero h1{font-weight:300;font-size:clamp(3rem,7vw,6rem);line-height:1.05;max-width:780px;animation:up .9s ease .3s both}
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:calc(var(--nav-h) + 36px) 60px 60px;
+  z-index:1;
+}
+.hero h1{
+  font-weight:300;
+  font-size:clamp(2.2rem, 5.6vw, 6rem);
+  line-height:1.05;
+  max-width:780px;
+  animation:up .9s ease .3s both;
+}
 .hero h1 em{font-style:italic;color:var(--gl)}
-.hero p{margin-top:32px;font-size:1.1rem;font-weight:300;line-height:1.75;max-width:480px;color:var(--muted);animation:up .9s ease .5s both}
+.hero p{
+  margin-top:28px;
+  font-size:clamp(.95rem, 1.4vw, 1.1rem);
+  font-weight:300;
+  line-height:1.75;
+  max-width:480px;
+  color:var(--muted);
+  animation:up .9s ease .5s both;
+}
 hr{border:none;border-top:1px solid var(--bdr)}
 section{position:relative;z-index:1;padding:90px 60px}
 .label{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:44px;display:flex;align-items:center;gap:14px}
@@ -44,10 +88,45 @@ section{position:relative;z-index:1;padding:90px 60px}
 footer{position:relative;z-index:1;padding:24px 60px;border-top:1px solid var(--bdr);display:flex;justify-content:space-between}
 footer span{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.13em;color:var(--muted)}
 @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){
-  nav,section,.contact,footer{padding-left:28px;padding-right:28px}
-  .hero{padding:0 28px}
-  .two,.contact,.grid{grid-template-columns:1fr}
+@media (max-width:768px){
+  :root{ --nav-h:64px; }
+
+  nav,section,.contact,footer{
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+  .hero{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:calc(var(--nav-h) + 36px) 60px 60px;
+  z-index:1;
+}
+  .hero h1{
+    font-size:clamp(2rem, 9vw, 3.4rem);
+    line-height:1.08;
+    max-width:100%;
+  }
+
+  .hero p{
+    margin-top:20px;
+    max-width:100%;
+    line-height:1.6;
+  }
+
+  .two,.contact,.grid{
+    grid-template-columns:1fr;
+  }
+}
+
+  @media (max-height:700px){
+  .hero{
+    justify-content:flex-start;
+  }
 }
 </style>
 </head>
